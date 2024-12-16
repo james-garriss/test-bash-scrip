@@ -1,0 +1,13 @@
+name: Test Bash
+on:
+  push:
+permissions: read-all
+jobs:
+  this-job:
+    name: Test Bash Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+      - name: Call Bash script
+        run: bash ${GITHUB_WORKSPACE}/scripts/example.sh hello
