@@ -10,4 +10,5 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v4
       - name: Call Bash script
-        run: bash ${GITHUB_WORKSPACE}/scripts/example.sh hello
+        run: ${GITHUB_WORKSPACE}/scripts/example.sh hello
+        shell: bash
